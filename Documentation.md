@@ -52,3 +52,42 @@ Bar Chart: Top 5 products by revenue.
 Pie Chart: Revenue distribution by region.
 
 Line Chart: Monthly sales trends over a year.
+
+
+------------------------------------------------------------------------------------------------------------------------
+Data Cleaning
+
+1. Observation and Method
+
+  Observation: Identified placeholder names such as - and ???? in the name column of the customer_dim dataset.
+
+  Method: Used Excel Filter to filter rows in the name column containing - or ????.
+
+2. Potential Issues with This Observation
+
+  Placeholder names do not provide meaningful customer identification, which could impact interpretability.
+
+  These customers had valid coustomer_key and significant purchase activity, making their records important for analysis.
+
+  Placeholder entries might confuse stakeholders when reviewing the dataset.
+
+3. Reason for This Observation
+
+  Placeholder names like - or ???? are likely due to incomplete data entry during customer registration or transaction logging.
+
+  Despite placeholder names, the presence of unique coustomer_key and high-value transactions suggests these are valid customers.
+
+4. Solution and Reason for the Solution
+
+  Solution: Replaced all placeholder names (- and ????) with "Unknown Customer".
+
+  How: Used Excel’s Find and Replace feature to update these entries.
+
+  Ensured that these customers are still identifiable through their unique coustomer_key.
+
+Reason for the Solution:
+  Retains the integrity of transaction data for high-value customers.
+
+  Avoids misrepresentation of these entries as invalid or excluded data.
+
+  Standardizes placeholder names, improving readability and clarity for stakeholders.
